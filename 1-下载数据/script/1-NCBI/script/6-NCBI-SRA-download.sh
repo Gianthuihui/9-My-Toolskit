@@ -12,12 +12,12 @@
 #TODO : 修改以下参数以适应你的环境
 #* SRA 列表文件路径
 #* 格式：每行一个 accession 号
-SRA_LIST="/mnt/f/OneDrive/文档（共享）/4_古代DNA/SRR_aDNA.txt"
+SRA_LIST="/mnt/c/Users/Administrator/Desktop/14_PRJNA229448.txt"
 #* prefetch 可执行文件路径
 #! 不知道如何配置的请查看`1-下载数据/script/1-NCBI/markdown/1-NCBI-SRA-代码使用说明.md`
-PREFETCH="/mnt/e/Scientifc_software/sratoolkit.3.1.1-ubuntu64/bin/prefetch"
+PREFETCH="/home/liuyunhui/software/sratoolkit.3.2.1-ubuntu64/bin/prefetch"
 #* 下载输出目录
-OUTDIR="/mnt/d/迅雷下载/NCBI/"
+OUTDIR="/mnt/d/aDNA_下载/NCBI"
 
 #* 下载配置
 JOBS=4               # 并行任务数
@@ -43,17 +43,15 @@ fetch_one() {
 
     echo "开始下载 $acc ..."
     for ((i=1; i<=MAX_RETRY; i++)); do
-        "$PREFETCH" --output-directory "$OUTDIR" "$acc" && break
+        "$PREFETCH" --max-size inf --output-directory "$OUTDIR" "$acc" && break
         echo "$acc 第 $i/$MAX_RETRY 次下载失败，重试中…" >&2
         sleep 10
     done
 
-    # 最终检查
     if ! ls "$OUTDIR/$acc"/*.sra >/dev/null 2>&1; then
         echo "$acc 经过 $MAX_RETRY 次尝试仍失败，记录到 $FAILED_LIST" >&2
         echo "$acc" >> "$FAILED_LIST"
     fi
-    # 始终返回 0，以免 parallel 因失败而早停
     return 0
 }
 

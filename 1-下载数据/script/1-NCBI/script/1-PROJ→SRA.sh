@@ -5,8 +5,8 @@
 # 具体安装方法请参考../markdown/1-NCBI工具包安装.md
 
 
-PROJECT_NUMBER="PRJNA778930"  # 替换为你需要的BioProject编号
-OUT_CSV="/mnt/c/Users/Administrator/Desktop/PRJNA778930_runinfo.csv" # 替换为输出文件路径
+PROJECT_NUMBER="PRJNA229448"  # 替换为你需要的BioProject编号
+OUT_CSV="/mnt/c/Users/Administrator/Desktop/PRJNA229448_runinfo.csv" # 替换为输出文件路径
 
 #TODO 再次提醒，需要安装NCBI的工具包
 
