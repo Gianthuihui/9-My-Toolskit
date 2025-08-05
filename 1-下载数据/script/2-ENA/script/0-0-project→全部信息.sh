@@ -3,7 +3,7 @@ set -uo pipefail
 
 #TODO 修改下列
 PROJECT="PRJEB32764" #todo 需要查询的项目编号
-PYTHON="/usr/bin/python3" # todo Python 解释器路径
+PYTHON="/home/liuyunhui/miniconda3/bin/python3" # todo Python 解释器路径
 BASE_DIR="/mnt/f/OneDrive/科研/4_代码/9-My-Toolskit/1-下载数据/script/2-ENA" #todo 脚本所在目录
 # 写死的路径
 SCRIPT="${BASE_DIR}/python/0-tsv→txt.py" #todo Python 脚本路径
