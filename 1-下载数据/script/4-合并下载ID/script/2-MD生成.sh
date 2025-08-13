@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-SEARCH_DIR="/mnt/c/Users/Administrator/Desktop"
-OUTPUT="/mnt/c/Users/Administrator/Desktop/fastq_md5.csv"
+SEARCH_DIR="/mnt/d/aDNA_下载/reads_fastq"
+OUTPUT="/mnt/d/aDNA_下载/reads_fastq/fastq_md5.csv"
 
 # 写表头
 echo '"file_path","md5"' > "$OUTPUT"

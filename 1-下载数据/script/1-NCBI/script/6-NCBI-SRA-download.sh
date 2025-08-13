@@ -12,12 +12,12 @@
 #TODO : 修改以下参数以适应你的环境
 #* SRA 列表文件路径
 #* 格式：每行一个 accession 号
-SRA_LIST="/mnt/d/aDNA_下载/NCBI/12/12.txt"
+SRA_LIST="/mnt/d/aDNA_下载/NCBI_9_10/9_10.txt"
 #* prefetch 可执行文件路径
 #! 不知道如何配置的请查看`1-下载数据/script/1-NCBI/markdown/1-NCBI-SRA-代码使用说明.md`
 PREFETCH="/home/liuyunhui/software/sratoolkit.3.2.1-ubuntu64/bin/prefetch"
 #* 下载输出目录
-OUTDIR="/mnt/d/aDNA_下载/NCBI/12"
+OUTDIR="/mnt/d/aDNA_下载/NCBI_9_10"
 
 #* 下载配置
 JOBS=4               # 并行任务数
